@@ -1,17 +1,21 @@
 package utils;
 
+import base.Base;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
-public class SeleniumUtils {
+public class SeleniumUtils extends Base {
 
-    WebDriver driver;
     Logger logger = LogManager.getLogger(getClass().getName());
 
-    public SeleniumUtils(WebDriver driver) {
-        this.driver = driver;
+    private Base base;
+
+    public SeleniumUtils() {
+    }
+
+    public SeleniumUtils(Base base) {
+        this.base = base;
     }
 
     public void navigateToUrl(String url) {

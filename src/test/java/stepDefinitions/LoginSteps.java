@@ -7,9 +7,9 @@ import io.cucumber.java.en.When;
 import locators.LoginPageLocators;
 import utils.SeleniumUtils;
 
-public class LoginSteps extends Base implements LoginPageLocators {
+public class LoginSteps implements LoginPageLocators {
 
-    SeleniumUtils utils = new SeleniumUtils(driver);
+    SeleniumUtils utils = new SeleniumUtils();
 
     @Given("Navigate to the Application URL - {string}")
     public void navigate_to_the_application_url(String url) {

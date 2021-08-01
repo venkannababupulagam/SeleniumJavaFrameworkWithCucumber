@@ -9,10 +9,17 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Hooks extends Base {
+    Logger logger = LogManager.getLogger(getClass().getName());
 
+    /** Implementation of Dependency Injection(Design Pattern)
+     * Precondition: The current class should extends to base
+     * 1. Create a private class type variable
+     * 2. Create an empty default constructor
+     * 3. Create an Class argument constructor
+     *  That's it now we can access driver from any class :)
+     */
 
     private Base base;
-    Logger logger = LogManager.getLogger(getClass().getName());
 
     public Hooks() {
     }
